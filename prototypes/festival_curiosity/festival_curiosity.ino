@@ -7,7 +7,7 @@
 
 #endif
 
-#define PIN 10
+#define PIN 13
 
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
@@ -18,7 +18,7 @@
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
 //   NEO_RGBW    Pixels are wired for RGBW bitstream (NeoPixel RGBW products)
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(165, PIN, NEO_RGB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(8, PIN, NEO_RGB + NEO_KHZ800);
 
 uint16_t black = 0;
 
@@ -30,7 +30,7 @@ uint16_t pink_blue = 75;
 uint32_t pinky;
 
 // to represent an rgb_value
-struct rgb_value {
+struct rgb_value {  
   uint16_t value; // a num between 0 and 255
 };
 
@@ -66,6 +66,11 @@ void loop() {
 //    uint32_t black = strip.Color(0, 0, 0);
 //
 //    strip.setBrightness(3);
+
+  for(uint16_t i = 1; i < 9; i++)
+    strip.setPixelColor(pinky, i);
+
+  delay(20000);
 
 
 // no. 1

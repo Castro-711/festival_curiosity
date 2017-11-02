@@ -6,8 +6,8 @@
 
 #endif
 
-#define PIN 10
-#define LEDS 16
+#define PIN 26
+#define LEDS 8
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(LEDS, PIN, NEO_RGB + NEO_KHZ800);
 
