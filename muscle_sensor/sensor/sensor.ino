@@ -7,7 +7,7 @@ void loop() {
   int sensor_val = analogRead(A0);
   
   Serial.println(sensor_val);
-  Serial.println("Yo Yo Yo..");
+//  Serial.println("Yo Yo Yo..");
 
   delay(500);
 
